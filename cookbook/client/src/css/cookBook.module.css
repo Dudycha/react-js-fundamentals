@@ -1,0 +1,28 @@
+s
+.header {
+  padding: 4px 12px;
+  border-radius: 18px;
+}
+
+.banner {
+  background-color: #72afdd;
+  padding: 40px 12px;
+  border-radius: 23px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 70px;
+}
+
+.container{
+  display: inline-block;
+  align-self: center;
+}
+
+.container{
+  align-self: center;
+}
+
+.imgSize{
+  width: 350px;
+  height: 200px;
+}
