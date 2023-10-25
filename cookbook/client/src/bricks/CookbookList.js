@@ -12,7 +12,7 @@ import { mdiTable, mdiViewGridOutline , mdiMagnify} from "@mdi/js";
 
 import styles from "../css/cookBook.module.css";
 
-import foodImg from '../assets/burger.PNG';
+
 
 
  
