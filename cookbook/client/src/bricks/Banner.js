@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../css/cookBook.module.css";
 
-class CookbookBanner extends React.Component {
+class Banner extends React.Component {
   render() {
     return (
       <h1 className={styles.banner} >
@@ -12,6 +12,6 @@ class CookbookBanner extends React.Component {
       </h1>
     );
   }
-}
+} 
 
-export default CookbookBanner;
+export default Banner;

@@ -1,5 +1,5 @@
 import "./App.css";
-import CookbookBanner from "./bricks/CookbookBanner";
+import Banner from "./bricks/Banner";
 import CookbookList from "./bricks/CookbookList";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="App">
     
-      <CookbookBanner classroom={intro} />
+      <Banner classroom={intro} />
     
       <CookbookList cookbookList={cookbookList} />
     </div>
