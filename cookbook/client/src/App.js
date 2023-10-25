@@ -30,8 +30,8 @@ const cookbookList = [
   },
   {
     name: "バーベキューバーガー",
-    description: "Desc",
-    ingredients: "Ingredients a b c d",
+    description: "説明",
+    ingredients: "材料",
     process: "にんじん、きゅうり、ピーマンを小さな立方体に切り、発芽レンズ豆と一緒に大きなボウルに入れます。 玉ねぎをみじん切りにし、野菜に加えます。 パセリのみじん切りを振りかける。 ボウルまたはマグカップで、キュウリワニス、オリーブオイル、蜂蜜をよく混ぜます。 ドレッシングをボウルに注ぎ、よく混ぜます。 最後に塩、こしょうで味を調えます",
     img:  yummy,
     id: "8fd09f3f5e2b4326",

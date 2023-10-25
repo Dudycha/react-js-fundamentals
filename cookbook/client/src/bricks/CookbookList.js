@@ -1,6 +1,7 @@
-import React , { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import PageGridList from "./CookbookGridList";
 import PageTableList from "./CookbookTableList";
+import ExtendedCookbookList from "./ExtendedCookbookList";
 
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
@@ -8,26 +9,25 @@ import Form from "react-bootstrap/Form";
 
 import Card from "react-bootstrap/Card";
 import Icon from "@mdi/react";
-import { mdiTable, mdiViewGridOutline , mdiMagnify} from "@mdi/js";
+import {
+  mdiTable,
+  mdiViewGridOutline,
+  mdiViewList, 
+  mdiMagnify
+} from "@mdi/js";
 
 import styles from "../css/cookBook.module.css";
 
-
-
-
- 
 function CookbookList(props) {
   const [viewType, setViewType] = useState("grid");
   const isGrid = viewType === "grid";
+  const isTable = viewType === "table";
+  const isList = viewType === "list"; 
   const [searchBy, setSearchBy] = useState("");
 
   const filteredCookbookList = useMemo(() => {
     return props.cookbookList.filter((item) => {
-      return (
-        item.name
-          .toLocaleLowerCase()
-          .includes(searchBy.toLocaleLowerCase()) 
-      );
+      return item.name.toLowerCase().includes(searchBy.toLowerCase());
     });
   }, [searchBy]);
 
@@ -60,29 +60,32 @@ function CookbookList(props) {
                 variant="outline-success"
                 type="submit"
               >
-               <Icon size={1} path={mdiMagnify} />
+                <Icon size={1} path={mdiMagnify} />
               </Button>
               <Button
                 variant="outline-primary"
                 onClick={() =>
                   setViewType((currentState) => {
                     if (currentState === "grid") return "table";
-                    else return "grid";
+                    if (currentState === "table") return "list"; 
+                    return "grid";
                   })
                 }
               >
-                 <Icon size={1} path={isGrid ? mdiTable : mdiViewGridOutline} />{" "}
-                {isGrid ? "Tabulka" : "Grid"}
+                <Icon size={1} path={isGrid ? mdiTable : isTable ? mdiViewList : mdiViewGridOutline} />{" "}
+                {isGrid ? "Tabulka" : isTable ? "List" : "Grid"} {}
               </Button>
             </Form>
           </div>
         </div>
       </Navbar>
       {isGrid ? (
-        <PageGridList cookbookList={filteredCookbookList} />
-      ) : (
-        <PageTableList cookbookList={filteredCookbookList} />
-      )}
+  <PageGridList cookbookList={filteredCookbookList} />
+) : isTable ? (
+  <PageTableList cookbookList={filteredCookbookList} />
+) : (
+  <ExtendedCookbookList cookbookList={filteredCookbookList} /> 
+)}
     </div>
   );
 }
