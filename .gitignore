@@ -13,7 +13,10 @@ react-js-fundamentals-cze/11-changing-list-of-students/server
 react-js-fundamentals-cze/11-changing-list-of-students/client/node_modules
 
 react-js-fundamentals-cze/12-filtering-list
-react-js-fundamentals-cze/13-connecting-server
+
+react-js-fundamentals-cze/13-connecting-server/server
+react-js-fundamentals-cze/13-connecting-server/client/node_modules
+
 react-js-fundamentals-cze/14-responsive-student-list
 react-js-fundamentals-cze/15-using-routes
 react-js-fundamentals-cze/16-advanced-form
