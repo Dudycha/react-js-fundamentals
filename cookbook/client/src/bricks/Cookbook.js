@@ -10,25 +10,12 @@ class Cookbook extends React.Component {
     return (
       <Card>
         <Card.Body> 
-        <div>     
-            <img src={this.props.cookbook.img} alt="Popis obrázku" />
-          </div>      
+     
           <div>
             <Icon path={mdiFoodForkDrink } size={2} color="red" />{" "}
             <strong>{this.props.cookbook.name}</strong>
           </div> 
-          <div>
-            <Icon path={mdiBookOpenVariant} size={1.5} color="blue" />{" "}
-            {this.props.cookbook.description}
-          </div>
-          <div>
-            <Icon path={ mdiSemanticWeb } size={1.5} color="grey" />{" "}
-            {this.props.cookbook.ingredients}
-          </div>
-          <div>
-            <Icon path={mdiCog } size={1.5} color="black" />{" "}
-            {this.props.cookbook.process}
-          </div>
+
         </Card.Body>
       </Card>
     );

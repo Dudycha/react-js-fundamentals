@@ -9,6 +9,9 @@ import Form from "react-bootstrap/Form";
 
 import Card from "react-bootstrap/Card";
 import Icon from "@mdi/react";
+
+import styles from "../css/cookBook.module.css";
+
 import {
   mdiTable,
   mdiViewGridOutline,
@@ -16,7 +19,7 @@ import {
   mdiMagnify
 } from "@mdi/js";
 
-import styles from "../css/cookBook.module.css";
+
 
 function CookbookList(props) {
   const [viewType, setViewType] = useState("grid");
@@ -26,10 +29,10 @@ function CookbookList(props) {
   const [searchBy, setSearchBy] = useState("");
 
   const filteredCookbookList = useMemo(() => {
-    return props.cookbookList.filter((item) => {
+    return props.cookbook.cookbookList.filter((item) => {
       return item.name.toLowerCase().includes(searchBy.toLowerCase());
     });
-  }, [searchBy]);
+  }, [searchBy,props.cookbook.studentList]);
 
   function handleSearch(event) {
     event.preventDefault();
@@ -44,7 +47,7 @@ function CookbookList(props) {
     <div>
       <Navbar bg="light">
         <div className="container-fluid">
-          <Navbar.Brand>Seznam studentů</Navbar.Brand>
+          <Navbar.Brand>Seznam receptů</Navbar.Brand>
           <div>
             <Form className="d-flex" onSubmit={handleSearch}>
               <Form.Control
