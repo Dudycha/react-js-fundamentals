@@ -1,0 +1,101 @@
+
+
+.recipeList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .recipeBig {
+    padding: 2px 0 5px;
+    margin: 0 auto;
+ 
+  }
+
+  .recipeBigCard {
+    padding: 15px;
+    background-color: rgb(215, 215, 215);
+  }
+
+  .recipeBigBody {
+    display: flex;
+    width: 1400px;
+   
+  }
+
+  .recipeBigName {
+    font-weight: bold;
+    padding: 4px 12px;
+    text-align: center;
+  }
+
+  .recipeBigDescIcon {
+    width: 5%;
+    padding: 4px 12px;
+    text-align: left;
+    width: 20%;
+  }
+
+  .recipeBigDescText {
+    width: 70%;
+    padding: 4px 12px;
+    text-align: left;
+  }
+
+  .recipeBigImg {
+    width: 40%;
+    object-fit: scale-down;
+  }
+  
+  .recipeDesc {
+    display: flex;
+  }
+
+
+
+  .recipeSmallImg {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    object-fit: cover;
+  }
+  .recipeSmall {
+    padding: 5px;
+    width: 25%;
+  }
+  .recipeSmallCard {
+    min-height: 465px;
+    padding: 5px;
+    background-color: rgb(215, 215, 215);
+  }
+  .recipeSmallBody {
+    
+  }
+  .recipeSmallname {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+  } 
+  .recipeSmallDescIcon {
+    width: 9%;
+    text-align: left;
+  }
+  .recipeSmallDescTxt {
+    width: 90%;
+    padding: 5px 12px;
+    text-align: left;
+  }
+  
+
+
+
+  .recipeContent {
+    width: 65%;
+  }
+  
+  .ingredientsList {
+    padding:  0 20px;
+    text-align: left;
+  }
+  
+
+  

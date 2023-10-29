@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from "react";
 import Icon from "@mdi/react";
 import { mdiLoading } from "@mdi/js";
-import styles from "./css/cookBook.module.css";
+import styles from "./css/cookbook.module.css";
 
 const StateType = {
   SUCCESS: "success",
@@ -74,8 +74,9 @@ function App() {
       return (
         <>
          <Banner banner={banner}/>
-       
-         <CookbookList cookbook={ingredientListCall.data} />
+
+             <CookbookList recipeList={recipeListCall.data} ingredientList = {ingredientListCall.data}/>
+        
          
          
         </>
