@@ -1,27 +1,25 @@
 cookbook/client/node_modules
 cookbook/server/
 react-js-fundamentals-eng/
-
 react-js-fundamentals-cze/02-project-introduction
 react-js-fundamentals-cze/05-react-introduction
 react-js-fundamentals-cze/06-student-list
 react-js-fundamentals-cze/07-components
 react-js-fundamentals-cze/09-using-css-in-components
 react-js-fundamentals-cze/10-third-party-components
-
 react-js-fundamentals-cze/11-changing-list-of-students/server
 react-js-fundamentals-cze/11-changing-list-of-students/client/node_modules
-
 react-js-fundamentals-cze/12-filtering-list
 
 react-js-fundamentals-cze/13-connecting-server/server
 react-js-fundamentals-cze/13-connecting-server/client/node_modules
 
-
 react-js-fundamentals-cze/14-responsive-student-list/server
-react-js-fundamentals-cze/14-responsive-student-list/node_modules
+react-js-fundamentals-cze/14-responsive-student-list/client/node_modules
 
-react-js-fundamentals-cze/15-using-routes
+react-js-fundamentals-cze/15-using-routes/server
+react-js-fundamentals-cze/15-using-routes/client/node_modules
+
 react-js-fundamentals-cze/16-advanced-form
 react-js-fundamentals-cze/17-form-validation
 react-js-fundamentals-cze/18-saving-form
