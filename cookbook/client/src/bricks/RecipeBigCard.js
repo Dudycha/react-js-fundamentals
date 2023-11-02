@@ -22,11 +22,11 @@ class RecipeBigCard extends React.Component {
                 {this.props.recipe.name}
 
 
-                <RecipeEditList 
+               
+                 <RecipeEditList recipe={this.props.recipe} />
               
-                  student={this.props.recipe.name}
                  
-                />
+              
 
               </h2>
 
