@@ -55,10 +55,16 @@ function CookbookList(props) {
 
 
   return (
-      <div>
+      <div style={{paddingTop: "60px"}}>
         <Navbar bg="light">
           <div className="container-fluid">
-            <Navbar.Brand>Seznam receptů</Navbar.Brand>
+          <Navbar bg="light">
+    <div className="nvBar">
+      <Navbar.Brand>Seznam receptů</Navbar.Brand>
+      {/* ... zbytek kódu */}
+    </div>
+  </Navbar>
+
             <div>
               <Form className="d-flex" onSubmit={handleSearch}>
                 <Form.Control
@@ -73,6 +79,7 @@ function CookbookList(props) {
                     style={{marginRight: "8px"}}
                     variant="outline-success"
                     type="submit"
+                    
                 >
                   <Icon size={1} path={mdiMagnify}/>
                 </Button>
