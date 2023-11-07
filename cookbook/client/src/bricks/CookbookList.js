@@ -8,6 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+
 import Icon from "@mdi/react";
 import { mdiTable, mdiViewGridOutline, mdiMagnify, mdiPlus, mdiGridLarge, mdiGrid } from "@mdi/js";
 
@@ -17,6 +18,8 @@ const DisplayType = {
   TABLE: 'table',
 };
 
+
+
 function CookbookList(props) {
   const [viewType, setViewType] = useState(DisplayType.BIG_GRID);
   const [searchBy, setSearchBy] = useState("");
@@ -25,6 +28,13 @@ function CookbookList(props) {
 
   const handleShowModal = () => setIsModalShown(true);
   const handleCloseModal = () => setIsModalShown(false);
+
+  const [addRecipeShow, setAddRecipeShow] = useState({
+    state: false
+  });
+
+  const handleAddRecipeShow = () => setAddRecipeShow({state: true});
+  const handleUpdateRecipeShow = (data) => setAddRecipeShow({state: true, data});
 
 
   const filteredCookbookList = useMemo(() => {
@@ -71,7 +81,7 @@ function CookbookList(props) {
 
               <Navbar.Brand>Seznam receptů</Navbar.Brand>
 
-              {/* ... zbytek kódu */}
+              {}
             </div>
           </Navbar>
 
@@ -139,12 +149,26 @@ function CookbookList(props) {
   style={{ marginRight: "8px", width: "170px" }}
   variant="success"
   type="button"
-  onClick={handleShowModal}
+  onClick={handleAddRecipeShow}
 >
   <Icon size={1} path={mdiPlus} />
   {"Vytvořit recept"}
+
 </Button>
-<CreateRecipe isModalShown={isModalShown} onHide={handleCloseModal} />
+
+
+
+
+<CreateRecipe
+        ingredientList={props.ingredientList}
+        show={addRecipeShow.state}
+        recipe={addRecipeShow.data}
+        setAddRecipeShow={setAddRecipeShow}
+        onComplete={(recipe) => props.onComplete(recipe)}
+
+    />
+
+
       </Navbar>
       <div className={styles.recipeList}>
         {switchView(viewType)}
