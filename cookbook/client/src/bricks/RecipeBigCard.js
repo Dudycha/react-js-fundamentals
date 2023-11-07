@@ -5,6 +5,7 @@ import { mdiFoodForkDrink, mdiCog } from "@mdi/js";
 import styles from "../css/recipe.module.css";
 import { mdiFileEdit } from "@mdi/js";
 import Button from "react-bootstrap/Button";
+import DeleteRecipe from "../bricks/DeleteRecipe";
 
 import RecipeEditList from "../bricks/RecipeEditList";
 
@@ -22,13 +23,12 @@ class RecipeBigCard extends React.Component {
                 {this.props.recipe.name}
 
 
-               
-                 <RecipeEditList recipe={this.props.recipe} />
-              
-                 
-              
+                <RecipeEditList recipe={this.props.recipe} />
+
 
               </h2>
+
+           
 
               <div className={styles.recipeDesc}>
 

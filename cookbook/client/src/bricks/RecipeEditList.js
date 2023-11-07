@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Modal, Form } from 'react-bootstrap';
 import Icon from "@mdi/react";
 import { mdiFileEdit } from "@mdi/js";
+import DeleteRecipe from "../bricks/DeleteRecipe";
 
 function RecipeEditList(props) {
     const [isModalShown, setShow] = useState(false);
@@ -44,6 +45,10 @@ function RecipeEditList(props) {
         <>
             <Modal show={isModalShown} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
+           
+                <DeleteRecipe recipe={props.recipe} deleteRicipe={(id) => props.deleteRicipe(id)}
+                onError={(error) => props.onError(error)} />
+
                     <Modal.Title style={{ textAlign: 'center', width: '100%' }}>
                         Editovat recept: {props.recipe.name}
                     </Modal.Title>
@@ -65,6 +70,8 @@ function RecipeEditList(props) {
                     {"..."}
                 </Modal.Footer>
             </Modal>
+
+        
 
             <Icon
                 path={mdiFileEdit}
