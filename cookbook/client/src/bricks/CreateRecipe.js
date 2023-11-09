@@ -10,6 +10,8 @@ const STATE = {
 };
 
 function CreateRecipe({ ingredientList, show, recipe, setAddRecipeShow, onComplete }) {
+
+
   const initialFormData = {
     name: "", description: "", imgUri: "", ingredients: []
   }
@@ -263,8 +265,9 @@ function CreateRecipe({ ingredientList, show, recipe, setAddRecipeShow, onComple
           <Button variant="secondary" onClick={handleClose}>
             Zrušit
           </Button>
-          <Button type="submit" variant="primary">
+          <Button type="submit" variant="primary"   onClick={handleClose}>
             Uložit recept
+          
           </Button>
         </Modal.Footer>
       </Form>
