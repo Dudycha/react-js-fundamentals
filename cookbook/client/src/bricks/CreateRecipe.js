@@ -204,7 +204,7 @@ function CreateRecipe({ ingredientList, show, recipe, setAddRecipeShow, onComple
                       <span className="fw-bold" style={{ fontSize: '1.5em' }}>{ingredientList.find((savedIngredient) => savedIngredient.id === ingredient.id)?.name}</span>
                     </Col>
                     <Col className="text-end">
-                      <Button 
+                      <Button
                         variant="btn btn-outline-danger"
                         onClick={() => removeSelectedIngredient(ingredient)}
                         style={{ width: '50px' }}
@@ -265,9 +265,9 @@ function CreateRecipe({ ingredientList, show, recipe, setAddRecipeShow, onComple
           <Button variant="secondary" onClick={handleClose}>
             Zrušit
           </Button>
-          <Button type="submit" variant="primary"   onClick={handleClose}>
+          <Button type="submit" variant="primary" >
             Uložit recept
-          
+
           </Button>
         </Modal.Footer>
       </Form>

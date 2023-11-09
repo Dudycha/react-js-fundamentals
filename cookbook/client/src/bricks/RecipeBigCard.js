@@ -22,13 +22,9 @@ class RecipeBigCard extends React.Component {
                 <Icon path={mdiFoodForkDrink} size={2} color="red" />{" "}
                 {this.props.recipe.name}
 
-
-                <RecipeEditList recipe={this.props.recipe} />
-
-
+                <RecipeEditList ingredientList={this.props.ingredientList} recipe={this.props.recipe} />
               </h2>
 
-           
 
               <div className={styles.recipeDesc}>
 

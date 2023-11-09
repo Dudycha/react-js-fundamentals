@@ -20,7 +20,8 @@ function RecipeTableList(props) {
                
                <td style={{ fontWeight: 'bold' }}>{shortenText(recipe.name,45)}</td>
                 <td>{shortenText(recipe.description,190)}</td>
-                <td><RecipeEditList recipe={recipe} /></td>
+               
+              
               </tr>
           );
         })}

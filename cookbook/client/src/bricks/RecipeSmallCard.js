@@ -17,7 +17,7 @@ class RecipeSmallCard extends React.Component {
         <Card className={styles.recipeSmallCard}>
           <Card.Body className={styles.recipeSmallBody}>
             <div style={{ textAlign: 'right' }}>
-              <RecipeEditList recipe={this.props.recipe} />
+            <RecipeEditList ingredientList={this.props.ingredientList} recipe={this.props.recipe} />
             </div>
             <div>
               <h2 className={styles.recipeSmallname}>
